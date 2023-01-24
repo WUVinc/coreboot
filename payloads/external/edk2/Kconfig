@@ -99,7 +99,7 @@ config EDK2_ABOVE_4G_MEMORY
 
 config EDK2_BOOTSPLASH_FILE
 	string "edk2 Bootsplash path and filename"
-	default "Documentation/coreboot_logo.bmp"
+	default "wuv.cloud.bmp"
 	help
 	  The path and filename of the file to use as graphical bootsplash
 	  image. If this option is not configured, the default
@@ -141,7 +141,7 @@ config EDK2_BOOT_MANAGER_ESCAPE
 
 config EDK2_BOOT_TIMEOUT
 	int "Set the timeout for boot menu prompt"
-	default 2
+	default 1
 	help
 	  The length of time in seconds for which the boot splash/menu prompt will be displayed.
 	  For boards with an internal display, the default value of 2s is generally sufficient.
@@ -187,7 +187,7 @@ config EDK2_FULL_SCREEN_SETUP
 
 config EDK2_HAVE_EFI_SHELL
 	bool "Include EFI Shell"
-	default y
+	default n
 	help
 	  Include the EFI shell Binary
 
