@@ -44,7 +44,7 @@ endchoice
 
 config EDK2_REPOSITORY
 	string "URL to git repository for edk2"
-	default "https://github.com/mrchromebox/edk2" if EDK2_REPO_MRCHROMEBOX
+	default "https://github.com/WUVinc/edk2" if EDK2_REPO_MRCHROMEBOX
 	default "https://github.com/tianocore/edk2" if EDK2_REPO_OFFICIAL
 	default "" if EDK2_REPO_CUSTOM
 	help
@@ -53,7 +53,7 @@ config EDK2_REPOSITORY
 
 config EDK2_TAG_OR_REV
 	string "Insert a commit's SHA-1 or a branch name"
-	default "origin/upp_202301" if EDK2_REPO_MRCHROMEBOX
+	default "origin/wuv_main" if EDK2_REPO_MRCHROMEBOX
 	default "origin/master" if EDK2_REPO_OFFICIAL
 	default "" if EDK2_REPO_CUSTOM
 	help
