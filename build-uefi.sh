@@ -3,6 +3,8 @@
 
 set -e
 
+ROM_DIR="../roms/"
+
 platforms=('snb_ivb' 'hsw' 'byt' 'bdw' 'bsw' 'skl' 'apl' 'kbl' 'whl' 'glk' \
            'cml' 'jsl' 'tgl' 'str' 'zen2' 'adl')
 build_targets=()
@@ -20,6 +22,8 @@ fi
 # get git rev
 rev=$(git describe --tags --dirty)
 
+mkdir -p ${ROM_DIR}
+
 for device in "${build_targets[@]}"; do
 	filename="coreboot_edk2-${device}-WUV.MrC_$(date +"%Y%m%d").rom"
 	rm -f ~/dev/firmware/${filename}*
@@ -32,4 +36,5 @@ for device in "${build_targets[@]}"; do
 	make -j$(nproc)
 	cp ./build/coreboot.rom ./${filename}
 	sha1sum ${filename} > ${filename}.sha1
+	mv ${filename}* ${ROM_DIR}
 done
