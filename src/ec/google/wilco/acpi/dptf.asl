@@ -117,6 +117,7 @@ Method (PATX, 0, Serialized)
 	W (DWTQ, Local0)
 }
 
+#ifdef EC_ENABLE_MULTIPLE_DPTF_PROFILES
 /*
  * Read current Device DPTF Profile Number
  */
@@ -129,3 +130,4 @@ Method (RCDP, 0, NotSerialized)
 		Return (Local0 - 1)
 	}
 }
+#endif
