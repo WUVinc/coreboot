@@ -5,8 +5,7 @@ set -e
 
 ROM_DIR="../roms/"
 
-platforms=('snb_ivb' 'hsw' 'byt' 'bdw' 'bsw' 'skl' 'apl' 'kbl' 'whl' 'glk' \
-           'cml' 'jsl' 'tgl' 'str' 'zen2' 'adl')
+platforms=('snb_ivb' 'hsw' 'byt' 'bdw' 'bsw' 'skl' 'apl' 'kbl' 'whl' 'glk' 'cml')
 build_targets=()
 
 if [ -z "$1" ]; then
